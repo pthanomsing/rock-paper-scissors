@@ -79,6 +79,8 @@ function play() {
         
     }
 
+    /* Update the score based on the result of the round*/
+
     function updateScore(result) {
     
         score = (result.split(',', 1)).toString();
