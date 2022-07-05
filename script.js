@@ -79,6 +79,20 @@ function play() {
         
     }
 
+    /* Print the winner of the game by comparing the score*/
+
+    function printWinner(playerScore, computerScore) {
+        if (playerScore>computerScore) {
+            console.log ('YOU ARE THE WINNER!')
+        }
+        else if (playerScore<computerScore) {
+            console.log ('THE COMPUTER WON')
+        }
+        else {
+            console.log('YOU DRAW! WHAT ARE THE CHANCE?')
+        }
+    }
+
     /* Update the score based on the result of the round*/
 
     function updateScore(result) {
