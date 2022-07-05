@@ -68,27 +68,33 @@ function playRound(playerSelection = computerPlay(), computerSelection = compute
 
 function play() {
 
- 
+    let playerScore = 0;
+    let computerScore = 0;
 
     for (let i = 0; i < 5; i++) {
         result = playRound();
         console.log(result);
         updateScore(result);
-        
+        console.log(`Your score = ${playerScore}  Computer score = ${computerScore}`)
         
     }
-}
 
-function updateScore(result) {
+    function updateScore(result) {
     
-    score = (result.split(',', 1)).toString();
-
-    switch (score) {
-        case 'You win!':
-            return 0;
-        case 'You lose!':
-            return 1;
-        case 'You draw!':
-            return 2;
+        score = (result.split(',', 1)).toString();
+    
+        switch (score) {
+            case 'You win!':
+                playerScore++;
+                break;
+            case 'You lose!':
+                computerScore++;
+                break;
+            case 'You draw!':
+                break;
+        }
     }
+
+    
 }
+
