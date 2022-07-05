@@ -37,7 +37,7 @@ function playRound(playerSelection = computerPlay(), computerSelection = compute
                     result = "You win!, Rock beats Paper";
                     break;
                 case 'paper':
-                    result = "You draw! Both of you chose Paper";
+                    result = "You draw!, Both of you chose Paper";
                     break;
                 case 'scissors':
                     result = "You lose!, Scissors beats Paper";
@@ -50,10 +50,10 @@ function playRound(playerSelection = computerPlay(), computerSelection = compute
                     result = "You lose!, Rock beats Scissors";
                     break;
                 case 'paper':
-                    result = "You win! Scissors beats Paper";
+                    result = "You win!, Scissors beats Paper";
                     break;
                 case 'scissors':
-                    result = "You draw! Both of you chose Scissors";
+                    result = "You draw!, Both of you chose Scissors";
                     break;
             }
             break;
@@ -64,3 +64,15 @@ function playRound(playerSelection = computerPlay(), computerSelection = compute
     return result;
 }
 
+/* Play 5 round of game, keep the score and report the winner or loser at the end */
+
+function play() {
+    let playerScore;
+    let computerScore;
+
+    for (let i = 0; i < 5; i++) {
+        result = playRound();
+
+        console.log(result);
+    }
+}
