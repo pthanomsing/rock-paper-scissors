@@ -10,6 +10,7 @@ function computerPlay() {
 }
 
 function play(playerSelection, computerSelection) {
+    playerSelection = playerSelection.toLowerCase();
     switch (playerSelection) {
         case 'rock':
             switch (computerSelection) {
