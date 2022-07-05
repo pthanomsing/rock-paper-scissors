@@ -67,12 +67,13 @@ function playRound(playerSelection = computerPlay(), computerSelection = compute
 /* Play 5 round of game, keep the score and report the winner or loser at the end */
 
 function play() {
-    let playerScore;
-    let computerScore;
+ 
 
     for (let i = 0; i < 5; i++) {
         result = playRound();
-
         console.log(result);
+
+        
+        
     }
 }
