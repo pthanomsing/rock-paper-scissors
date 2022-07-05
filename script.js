@@ -15,7 +15,7 @@ function computerPlay() {
 
 /* Play two selection of input against each other and display the result*/ 
 
-function playRound(playerSelection = computerPlay(), computerSelection = computerPlay()) {
+function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     switch (playerSelection) {
         case 'rock':
@@ -72,12 +72,19 @@ function play() {
     let computerScore = 0;
 
     for (let i = 0; i < 5; i++) {
+
+        let choice = ("Please choose Rock, Paper or Scissors", "Type Here")
+
+        playRound(choice,computerPlay())
+
         result = playRound();
         console.log(result);
         updateScore(result);
         console.log(`Your score = ${playerScore}  Computer score = ${computerScore}`)
         
     }
+
+    printWinner(playerScore,computerScore);
 
     /* Print the winner of the game by comparing the score*/
 
@@ -86,7 +93,7 @@ function play() {
             console.log ('YOU ARE THE WINNER!')
         }
         else if (playerScore<computerScore) {
-            console.log ('THE COMPUTER WON')
+            console.log ('THE COMPUTER WON!')
         }
         else {
             console.log('YOU DRAW! WHAT ARE THE CHANCE?')
