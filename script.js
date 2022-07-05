@@ -16,6 +16,14 @@ function computerPlay() {
 /* Play two selection of input against each other and display the result*/ 
 
 function playRound(playerSelection, computerSelection) {
+
+
+    /* Reload page if the user close the prompt*/
+
+    if (playerSelection === null) {
+        location.reload();
+    }
+
     playerSelection = playerSelection.toLowerCase();
     switch (playerSelection) {
         case 'rock':
@@ -66,8 +74,10 @@ function playRound(playerSelection, computerSelection) {
 
 
 function getInput(){
+    
     let choice = prompt("Please choose Rock, Paper or Scissors", "Type Here");
-    return choice
+    return choice;
+
 }
 
 
@@ -84,6 +94,7 @@ function play() {
         console.log(result);
 
         /* Do not count round if updateScore return 0 */
+        
         if (updateScore(result)===0) {
             i--
         };
