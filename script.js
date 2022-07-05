@@ -76,7 +76,15 @@ function play() {
         let choice = prompt("Please choose Rock, Paper or Scissors", "Type Here");
         result = playRound(choice,computerPlay());
         console.log(result);
-        updateScore(result);
+       
+
+        /* Do not count round if updateScore return 0 */
+        if (updateScore(result)===0) {
+            i--
+        };
+
+        
+
         console.log(`ROUND ${i+1} : Your score = ${playerScore}  Computer score = ${computerScore}`)
         
     }
@@ -112,6 +120,8 @@ function play() {
                 break;
             case 'You draw!':
                 break;
+            default:
+                return 0
         }
     }
 
