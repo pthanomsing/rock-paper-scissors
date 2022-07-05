@@ -9,7 +9,7 @@ function computerPlay() {
     return getRandom(play);
 }
 
-function play(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     switch (playerSelection) {
         case 'rock':
