@@ -1,6 +1,6 @@
 
 function getRandom(array) {
-    return element = array[Math.floor(Math.random()*array.length)];
+    return array[Math.floor(Math.random()*array.length)];
 }
 
 function computerPlay() {
@@ -17,10 +17,10 @@ function play(playerSelection, computerSelection) {
                     result = "You draw!, Both of you chose Rock";
                     break;
                 case 'paper':
-                    result = "You lose!, Paper beats Rock"
+                    result = "You lose!, Paper beats Rock";
                     break;
                 case 'scissors' :
-                    result = "You win!, Rock beats Scissors"
+                    result = "You win!, Rock beats Scissors";
                     break;
             }
         case 'paper' :
@@ -29,10 +29,10 @@ function play(playerSelection, computerSelection) {
                     result = "You win!, Rock beats Paper";
                     break;
                 case 'paper':
-                    result = "You draw! Both of you chose Paper"
+                    result = "You draw! Both of you chose Paper";
                     break;
                 case 'scissors' :
-                    result = "You lose!, Scissors beats Paper"
+                    result = "You lose!, Scissors beats Paper";
                     break;
             }
         case 'scissors' :
@@ -41,14 +41,14 @@ function play(playerSelection, computerSelection) {
                     result = "You lose!, Rock beats Scissors";
                     break;
                 case 'paper':
-                    result = "You win! Scissors beats Paper"
+                    result = "You win! Scissors beats Paper";
                     break;
                 case 'scissors' :
-                    result = "You draw! Both of you chose Scissors"
+                    result = "You draw! Both of you chose Scissors";
                     break;
             }
         default :
-            result = "Please choose Rock, Paper or Scissors!"
+            result = "Please choose Rock, Paper or Scissors!";
 
     }
     return result;
