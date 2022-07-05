@@ -1,13 +1,19 @@
 
+/* Get random element from an array*/
+
 function getRandom(array) {
     return array[Math.floor(Math.random()*array.length)];
 }
+
+/* Randomly select rock, paper or scissors from the array*/ 
 
 function computerPlay() {
 
     const play = ['rock', 'paper', 'scissors'];
     return getRandom(play);
 }
+
+/* Play two selection of input against each other and display the result*/ 
 
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
@@ -57,3 +63,5 @@ function playRound(playerSelection, computerSelection) {
     }
     return result;
 }
+
+
