@@ -94,7 +94,7 @@ function play() {
         console.log(result);
 
         /* Do not count round if updateScore return 0 */
-        
+
         if (updateScore(result)===0) {
             i--
         };
@@ -121,7 +121,7 @@ function play() {
         }
     }
 
-    /* Update the score based on the result of the round*/
+    /* Update the score based on the result of the round. Return 0 if input invalid*/
 
     function updateScore(result) {
     
