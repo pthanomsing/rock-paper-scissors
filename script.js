@@ -74,10 +74,7 @@ function play() {
     for (let i = 0; i < 5; i++) {
 
         let choice = prompt("Please choose Rock, Paper or Scissors", "Type Here");
-
-        playRound(choice,computerPlay())
-
-        result = playRound();
+        result = playRound(choice,computerPlay());
         console.log(result);
         updateScore(result);
         console.log(`Your score = ${playerScore}  Computer score = ${computerScore}`)
