@@ -5,13 +5,13 @@ function getRandom(array) {
 
 function computerPlay() {
 
-    const play = ['rock', 'paper', 'scissor'];
+    const play = ['rock', 'paper', 'scissors'];
     return getRandom(play);
 }
 
 function play(playerSelection, computerSelection) {
     switch (playerSelection) {
-        case 'rock' :
+        case 'rock':
             switch (computerSelection) {
                 case 'rock':
                     result = "You draw!, Both of you chose Rock";
@@ -19,11 +19,12 @@ function play(playerSelection, computerSelection) {
                 case 'paper':
                     result = "You lose!, Paper beats Rock";
                     break;
-                case 'scissors' :
+                case 'scissors':
                     result = "You win!, Rock beats Scissors";
                     break;
             }
-        case 'paper' :
+            break;
+        case 'paper':
             switch (computerSelection) {
                 case 'rock':
                     result = "You win!, Rock beats Paper";
@@ -31,11 +32,12 @@ function play(playerSelection, computerSelection) {
                 case 'paper':
                     result = "You draw! Both of you chose Paper";
                     break;
-                case 'scissors' :
+                case 'scissors':
                     result = "You lose!, Scissors beats Paper";
                     break;
             }
-        case 'scissors' :
+            break;
+        case 'scissors':
             switch (computerSelection) {
                 case 'rock':
                     result = "You lose!, Rock beats Scissors";
@@ -43,14 +45,14 @@ function play(playerSelection, computerSelection) {
                 case 'paper':
                     result = "You win! Scissors beats Paper";
                     break;
-                case 'scissors' :
+                case 'scissors':
                     result = "You draw! Both of you chose Scissors";
                     break;
             }
-        default :
+            break;
+        default:
             result = "Please choose Rock, Paper or Scissors!";
 
     }
     return result;
 }
-
