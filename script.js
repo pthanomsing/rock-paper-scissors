@@ -73,7 +73,7 @@ function play() {
 
     for (let i = 0; i < 5; i++) {
 
-        let choice = ("Please choose Rock, Paper or Scissors", "Type Here")
+        let choice = prompt("Please choose Rock, Paper or Scissors", "Type Here");
 
         playRound(choice,computerPlay())
 
