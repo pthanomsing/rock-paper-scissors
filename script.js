@@ -77,7 +77,7 @@ function play() {
         result = playRound(choice,computerPlay());
         console.log(result);
         updateScore(result);
-        console.log(`Your score = ${playerScore}  Computer score = ${computerScore}`)
+        console.log(`ROUND ${i+1} : Your score = ${playerScore}  Computer score = ${computerScore}`)
         
     }
 
