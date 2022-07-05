@@ -15,7 +15,7 @@ function computerPlay() {
 
 /* Play two selection of input against each other and display the result*/ 
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection = computerPlay(), computerSelection = computerPlay()) {
     playerSelection = playerSelection.toLowerCase();
     switch (playerSelection) {
         case 'rock':
@@ -63,5 +63,4 @@ function playRound(playerSelection, computerSelection) {
     }
     return result;
 }
-
 
