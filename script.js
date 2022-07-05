@@ -67,13 +67,28 @@ function playRound(playerSelection = computerPlay(), computerSelection = compute
 /* Play 5 round of game, keep the score and report the winner or loser at the end */
 
 function play() {
+
  
 
     for (let i = 0; i < 5; i++) {
         result = playRound();
         console.log(result);
+        updateScore(result);
+        
+        
+    }
+}
 
-        
-        
+function updateScore(result) {
+    
+    score = (result.split(',', 1)).toString();
+
+    switch (score) {
+        case 'You win!':
+            return 0;
+        case 'You lose!':
+            return 1;
+        case 'You draw!':
+            return 2;
     }
 }
