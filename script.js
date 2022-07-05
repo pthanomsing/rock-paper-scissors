@@ -64,6 +64,13 @@ function playRound(playerSelection, computerSelection) {
     return result;
 }
 
+
+function getInput(){
+    let choice = prompt("Please choose Rock, Paper or Scissors", "Type Here");
+    return choice
+}
+
+
 /* Play 5 round of game, keep the score and report the winner or loser at the end */
 
 function play() {
@@ -73,10 +80,8 @@ function play() {
 
     for (let i = 0; i < 5; i++) {
 
-        let choice = prompt("Please choose Rock, Paper or Scissors", "Type Here");
-        result = playRound(choice,computerPlay());
+        let result = playRound(getInput(),computerPlay());
         console.log(result);
-       
 
         /* Do not count round if updateScore return 0 */
         if (updateScore(result)===0) {
@@ -124,7 +129,6 @@ function play() {
                 return 0
         }
     }
-
     
 }
 
