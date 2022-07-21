@@ -21,7 +21,7 @@ function playRound(playerSelection, computerSelection) {
     /* Reload page if the user close the prompt*/
 
     if (playerSelection === null) {
-        location.reload();
+        location.reload();a
     }
 
     playerSelection = playerSelection.toLowerCase();
