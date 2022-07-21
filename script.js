@@ -88,15 +88,14 @@ function play() {
     let playerScore = 0;
     let computerScore = 0;
 
-    for (let i = 0; i < 5; i++) {
-
+   
         let result = playRound(getInput(),computerPlay());
         console.log(result);
 
         /* Do not count round if updateScore return 0 */
 
         if (updateScore(result)===0) {
-            i--
+            return;
         };
 
         
@@ -104,7 +103,6 @@ function play() {
         console.log(`ROUND ${i+1} : Your score = ${playerScore}  Computer score = ${computerScore}`)
         
     }
-
     printWinner(playerScore,computerScore);
 
     /* Print the winner of the game by comparing the score*/
