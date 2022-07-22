@@ -107,7 +107,9 @@ function checkWinner() {
     }
 }
 
-/* Update the score based on the result of the round. Return 0 if input invalid*/
+/* Update the score based on the result of the round and return result. 
+Return 1 = win, 2 = lose, 3 = draw 
+Return 0 if input invalid*/
 
 function updateScore(result) {
 
@@ -137,7 +139,8 @@ function printScore() {
 }
 
 
-/* Hilight the buttons base on the result of the round => 1 = win, 2 = lose, 3 = draw */
+/* Hilight the buttons base on the result of the round 
+roundScore : 1 = win, 2 = lose, 3 = draw */
 
 function hilightButton(playerChoice, computerChoice, roundScore) {
 
@@ -163,7 +166,7 @@ function hilightButton(playerChoice, computerChoice, roundScore) {
 }
 
 
-/* Reset all buttons background color to its default setting*/
+/* Reset all buttons background color to its default setting */
 
 function clearHilight() {
 
