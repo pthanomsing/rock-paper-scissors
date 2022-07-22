@@ -165,7 +165,10 @@ scissorsButton.addEventListener('click', function() {
 
 const resultContainer = document.querySelector('#container');
 const roundResult = document.createElement('div');
+roundResult.setAttribute("id","round-result");
 const scoreResult = document.createElement('div');
+scoreResult.setAttribute("id","score-result");
 const gameResult = document.createElement('div');
+gameResult.setAttribute("id","game-result");
 
 
