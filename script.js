@@ -102,8 +102,8 @@ function play(playerChoice) {
         };
 
         
-
-        console.log(`ROUND ${round} : Your score = ${playerScore}  Computer score = ${computerScore}`)
+        scoreResult.textContent = `ROUND ${round} : Your score = ${playerScore}  Computer score = ${computerScore}`;
+        resultContainer.appendChild(scoreResult);
         
         gameResult.textContent = checkWinner();
        
@@ -172,6 +172,7 @@ scissorsButton.addEventListener('click', function() {
 
 const resultContainer = document.querySelector('#container');
 const roundResult = document.createElement('div');
+const scoreResult = document.createElement('div');
 const gameResult = document.createElement('div');
 
 
