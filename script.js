@@ -189,21 +189,13 @@ let round = 0;
 let roundScore = 0;
 
 
-const rockButton = document.querySelector('#rock');
-const paperButton = document.querySelector('#paper');
-const scissorsButton = document.querySelector('#scissors')
 
+const playerButtons = document.querySelectorAll('#rock,#paper,#scissors');
 
-
-
-rockButton.addEventListener('click', function() { 
-    play('rock');
-});
-paperButton.addEventListener('click', function() { 
-    play('paper');
-});
-scissorsButton.addEventListener('click', function() { 
-    play('scissors');
+playerButtons.forEach((playerButton) => {
+    playerButton.addEventListener('click', function(){
+        play(playerButton.id);
+    });
 });
 
 
