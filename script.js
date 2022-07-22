@@ -18,12 +18,6 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
 
 
-    /* Reload page if the user close the prompt*/
-
-    if (playerSelection === null) {
-        location.reload();a
-    }
-
     playerSelection = playerSelection.toLowerCase();
     switch (playerSelection) {
         case 'rock':
