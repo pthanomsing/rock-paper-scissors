@@ -82,11 +82,11 @@ function getInput(){
 
 function play(playerChoice) {
 
-   
+        const computerChoice = computerPlay();
 
-   
+        clearHilight(); 
         
-        roundResult.textContent = playRound(playerChoice,computerPlay());
+        roundResult.textContent = playRound(playerChoice,computerChoice);
         resultContainer.appendChild(roundResult);
 
         /* Do not count round if updateScore return 0 */
@@ -101,6 +101,8 @@ function play(playerChoice) {
         
         gameResult.textContent = checkWinner();
         resultContainer.appendChild(gameResult);
+
+        hilightButton(computerChoice);
         
 }
 
@@ -138,6 +140,29 @@ function updateScore(result) {
             return 0
     }
 }
+
+function hilightButton(choice) {
+
+            document.querySelector(`#computer-${choice}`).style.backgroundColor = "red";
+          
+    
+
+}
+
+function clearHilight() {
+
+
+    document.querySelector('#rock').style.backgroundColor = "white";
+    document.querySelector('#paper').style.backgroundColor = "white";
+    document.querySelector('#scissors').style.backgroundColor = "white";
+
+    document.querySelector('#computer-rock').style.backgroundColor = "white";
+    document.querySelector('#computer-paper').style.backgroundColor = "white";
+    document.querySelector('#computer-scissors').style.backgroundColor = "white";
+
+}
+
+
     
 
 
@@ -151,6 +176,8 @@ let round = 0;
 const rockButton = document.querySelector('#rock');
 const paperButton = document.querySelector('#paper');
 const scissorsButton = document.querySelector('#scissors')
+
+
 
 rockButton.addEventListener('click', function() { 
     play('rock');
