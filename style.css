@@ -65,3 +65,27 @@ button {
     gap: 30px;
 }
 
+#scoreboard {
+    display: flex;
+    flex-direction: column;
+
+    height:100px;
+    width:300px;
+
+    
+
+}
+
+#scorename, #score {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 20px;
+}
+
+#you, #com, #player-score, #computer-score{
+    width:130px;
+    text-align: center;
+    background-color: pink;
+}
+
