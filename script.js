@@ -91,9 +91,8 @@ function play(playerChoice) {
 
         /* Do not count round if updateScore return 0 */
 
-        if (updateScore(result)===0) {
-            return;
-        };
+        roundScore = updateScore(result);
+
 
         
         scoreResult.textContent = `[ROUND ${round}]  YOU ${playerScore}  -  ${computerScore} COMPUTER `;
@@ -102,7 +101,7 @@ function play(playerChoice) {
         gameResult.textContent = checkWinner();
         resultContainer.appendChild(gameResult);
 
-        hilightButton(playerChoice, computerChoice);
+        hilightButton(playerChoice, computerChoice, roundScore);
         
 }
 
@@ -130,21 +129,36 @@ function updateScore(result) {
     switch (score) {
         case 'You win!':
             playerScore++;
-            break;
+            return 1;
         case 'You lose!':
             computerScore++;
-            break;
+            return 2;
         case 'You draw!':
-            break;
+            return 3;
         default:
             return 0
     }
 }
 
-function hilightButton(playerChoice, computerChoice) {
+function hilightButton(playerChoice, computerChoice, roundScore) {
 
-    document.querySelector(`#${playerChoice}`).style.backgroundColor = "green";
-    document.querySelector(`#computer-${computerChoice}`).style.backgroundColor = "red";
+
+    switch (roundScore) {
+        case 1:
+            document.querySelector(`#${playerChoice}`).style.backgroundColor = "green";
+            document.querySelector(`#computer-${computerChoice}`).style.backgroundColor = "green";
+            break;
+        case 2:
+            document.querySelector(`#${playerChoice}`).style.backgroundColor = "red";
+            document.querySelector(`#computer-${computerChoice}`).style.backgroundColor = "red";
+            break;
+        case 3:
+            document.querySelector(`#${playerChoice}`).style.backgroundColor = "grey";
+            document.querySelector(`#computer-${computerChoice}`).style.backgroundColor = "grey";
+            break;
+        default:
+            return 0         
+    }
           
     
 
@@ -172,6 +186,7 @@ function clearHilight() {
 let playerScore = 0;
 let computerScore = 0;
 let round = 0;
+let roundScore = 0;
 
 
 const rockButton = document.querySelector('#rock');
