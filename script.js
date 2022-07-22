@@ -89,8 +89,6 @@ function play(playerChoice) {
         roundResult.textContent = `[ROUND ${round}]  ${playRound(playerChoice,computerChoice)}`;
         resultContainer.appendChild(roundResult);
 
-        /* Do not count round if updateScore return 0 */
-
         roundScore = updateScore(result);
         
         gameResult.textContent = checkWinner();
@@ -103,7 +101,7 @@ function play(playerChoice) {
 }
 
 
-    /* Check for and print the winner after the score reached 5*/
+/* Check for and print the winner after the score reached 5*/
 
 function checkWinner() {
     if (playerScore>=5 && playerScore>=computerScore) {
@@ -136,6 +134,8 @@ function updateScore(result) {
             return 0
     }
 }
+
+/* Print the current score on the page */
 
 function printScore() {
 
@@ -170,8 +170,10 @@ function hilightButton(playerChoice, computerChoice, roundScore) {
 
 }
 
-function clearHilight() {
 
+/* Reset all buttons background color to its default setting*/
+
+function clearHilight() {
 
     const buttons = document.querySelectorAll('button');
 
@@ -183,7 +185,6 @@ function clearHilight() {
 
 
     
-
 
 
 // Score of Player vs Computer
