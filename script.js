@@ -78,11 +78,16 @@ function play(playerChoice) {
 
         clearHilight(); 
         
+
+        /* Add round result to the page */
+
         roundResult.textContent = `[ROUND ${round}]  ${playRound(playerChoice,computerChoice)}`;
         resultContainer.appendChild(roundResult);
 
         roundScore = updateScore(result);
         
+        /* Add game result to the page if a player reached 5 points */
+
         gameResult.textContent = checkWinner();
         resultContainer.appendChild(gameResult);
 
@@ -180,7 +185,7 @@ function clearHilight() {
 
 
     
-
+/* Variables for keeping track of scores and rounds */
 let playerScore = 0;
 let computerScore = 0;
 let round = 0;
