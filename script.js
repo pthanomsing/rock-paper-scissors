@@ -115,10 +115,10 @@ function play(playerChoice) {
     /* Check for and print the winner after the score reached 5*/
 
 function checkWinner() {
-    if (playerScore===5) {
+    if (playerScore>=5 && playerScore>=computerScore) {
         return 'YOU ARE THE WINNER!'
     }
-    else if (computerScore===5) {
+    else if (computerScore>=5 && computerScore>=playerScore) {
         return 'THE COMPUTER WON!';
     }
     else {
