@@ -100,7 +100,6 @@ function play(playerChoice) {
         resultContainer.appendChild(scoreResult);
         
         gameResult.textContent = checkWinner();
-       
         resultContainer.appendChild(gameResult);
         
 }
