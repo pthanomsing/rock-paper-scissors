@@ -91,8 +91,9 @@ function play(playerChoice) {
    
 
    
-        let result = playRound(playerChoice,computerPlay());
-        console.log(result);
+        
+        roundResult.textContent = playRound(playerChoice,computerPlay());
+        resultContainer.appendChild(roundResult);
 
         /* Do not count round if updateScore return 0 */
 
@@ -170,6 +171,7 @@ scissorsButton.addEventListener('click', function() {
 
 
 const resultContainer = document.querySelector('#container');
+const roundResult = document.createElement('div');
 const gameResult = document.createElement('div');
 
 
