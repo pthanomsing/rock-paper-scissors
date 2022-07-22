@@ -38,6 +38,7 @@ function playRound(playerSelection, computerSelection) {
                     result = "You win!, Rock beats Scissors";
                     break;
             }
+            round++;
             break;
         case 'paper':
             switch (computerSelection) {
@@ -51,6 +52,7 @@ function playRound(playerSelection, computerSelection) {
                     result = "You lose!, Scissors beats Paper";
                     break;
             }
+            round++;
             break;
         case 'scissors':
             switch (computerSelection) {
@@ -64,6 +66,7 @@ function playRound(playerSelection, computerSelection) {
                     result = "You draw!, Both of you chose Scissors";
                     break;
             }
+            round++;
             break;
         default:
             result = "Please choose Rock, Paper or Scissors!";
@@ -99,46 +102,47 @@ function play(playerChoice) {
 
         
 
-        console.log(`ROUND ${round+1} : Your score = ${playerScore}  Computer score = ${computerScore}`)
+        console.log(`ROUND ${round} : Your score = ${playerScore}  Computer score = ${computerScore}`)
         
-    
-    printWinner(playerScore,computerScore);
-
-    /* Print the winner of the game by comparing the score*/
-
-    function printWinner(playerScore, computerScore) {
-        if (playerScore===5) {
-            console.log ('YOU ARE THE WINNER!')
-        }
-        else if (computerScore===5) {
-            console.log ('THE COMPUTER WON!')
-        }
-        else {
-            return;
-        }
-    }
-
-    /* Update the score based on the result of the round. Return 0 if input invalid*/
-
-    function updateScore(result) {
-    
-        score = (result.split(',', 1)).toString();
-    
-        switch (score) {
-            case 'You win!':
-                playerScore++;
-                break;
-            case 'You lose!':
-                computerScore++;
-                break;
-            case 'You draw!':
-                break;
-            default:
-                return 0
-        }
-    }
-    
+        checkWinner();
 }
+
+
+    /* Check for and print the winner after the score reached 5*/
+
+function checkWinner() {
+    if (playerScore===5) {
+        console.log ('YOU ARE THE WINNER!')
+    }
+    else if (computerScore===5) {
+        console.log ('THE COMPUTER WON!')
+    }
+    else {
+        return;
+    }
+}
+
+/* Update the score based on the result of the round. Return 0 if input invalid*/
+
+function updateScore(result) {
+
+    score = (result.split(',', 1)).toString();
+
+    switch (score) {
+        case 'You win!':
+            playerScore++;
+            break;
+        case 'You lose!':
+            computerScore++;
+            break;
+        case 'You draw!':
+            break;
+        default:
+            return 0
+    }
+}
+    
+
 
 
 // Score of Player vs Computer
