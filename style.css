@@ -94,6 +94,9 @@ button {
 }
 
 #round-result {
-    margin: 10px;
+    margin: 20px;
 }
 
+#result {
+    height:200px;
+}
