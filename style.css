@@ -30,6 +30,8 @@ body {
     border-radius: 15px;
 
     line-height: 1.6;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 button {
@@ -49,7 +51,7 @@ button {
     font-size: 30px;
 }
 
-#play-button {
+#play-button, #computer-button{
     display: flex;
     gap: 30px;
 }
