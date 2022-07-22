@@ -102,6 +102,8 @@ function play(playerChoice) {
         resultContainer.appendChild(gameResult);
 
         hilightButton(playerChoice, computerChoice, roundScore);
+
+        printScore();
         
 }
 
@@ -138,6 +140,13 @@ function updateScore(result) {
         default:
             return 0
     }
+}
+
+function printScore() {
+
+    document.querySelector('#player-score').textContent = playerScore;
+    document.querySelector('#computer-score').textContent = computerScore;
+    
 }
 
 function hilightButton(playerChoice, computerChoice, roundScore) {
@@ -192,6 +201,7 @@ let roundScore = 0;
 const rockButton = document.querySelector('#rock');
 const paperButton = document.querySelector('#paper');
 const scissorsButton = document.querySelector('#scissors')
+
 
 
 
