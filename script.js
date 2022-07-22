@@ -96,7 +96,7 @@ function play(playerChoice) {
         };
 
         
-        scoreResult.textContent = `ROUND ${round} : Your score = ${playerScore}  Computer score = ${computerScore}`;
+        scoreResult.textContent = `[ROUND ${round}]  YOU ${playerScore}  -  ${computerScore} COMPUTER `;
         resultContainer.appendChild(scoreResult);
         
         gameResult.textContent = checkWinner();
