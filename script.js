@@ -107,10 +107,10 @@ function play(playerChoice) {
 
 function checkWinner() {
     if (playerScore>=5 && playerScore>=computerScore) {
-        return 'YOU ARE THE WINNER!'
+        return 'YOU ARE THE WINNER! 🥳🎉'
     }
     else if (computerScore>=5 && computerScore>=playerScore) {
-        return 'THE COMPUTER WON!';
+        return 'THE COMPUTER WON! 😥💔';
     }
     else {
         return;

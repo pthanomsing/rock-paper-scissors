@@ -86,7 +86,7 @@ button {
 #you, #com, #player-score, #computer-score{
     width:130px;
     text-align: center;
-    background-color: pink;
+    background-color: rgb(248, 191, 239);
 }
 
 #player-score, #computer-score {
