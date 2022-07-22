@@ -56,6 +56,10 @@ button:hover {
     font-size: 30px;
 }
 
+button {
+    cursor: pointer;
+}
+
 #play-button, #computer-button{
     display: flex;
     gap: 30px;

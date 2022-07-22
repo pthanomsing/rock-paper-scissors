@@ -102,7 +102,7 @@ function play(playerChoice) {
         gameResult.textContent = checkWinner();
         resultContainer.appendChild(gameResult);
 
-        hilightButton(computerChoice);
+        hilightButton(playerChoice, computerChoice);
         
 }
 
@@ -141,9 +141,10 @@ function updateScore(result) {
     }
 }
 
-function hilightButton(choice) {
+function hilightButton(playerChoice, computerChoice) {
 
-            document.querySelector(`#computer-${choice}`).style.backgroundColor = "red";
+    document.querySelector(`#${playerChoice}`).style.backgroundColor = "green";
+    document.querySelector(`#computer-${computerChoice}`).style.backgroundColor = "red";
           
     
 
@@ -152,13 +153,13 @@ function hilightButton(choice) {
 function clearHilight() {
 
 
-    document.querySelector('#rock').style.backgroundColor = "white";
-    document.querySelector('#paper').style.backgroundColor = "white";
-    document.querySelector('#scissors').style.backgroundColor = "white";
+    document.querySelector('#rock').style.backgroundColor = "";
+    document.querySelector('#paper').style.backgroundColor = "";
+    document.querySelector('#scissors').style.backgroundColor = "";
 
-    document.querySelector('#computer-rock').style.backgroundColor = "white";
-    document.querySelector('#computer-paper').style.backgroundColor = "white";
-    document.querySelector('#computer-scissors').style.backgroundColor = "white";
+    document.querySelector('#computer-rock').style.backgroundColor = "";
+    document.querySelector('#computer-paper').style.backgroundColor = "";
+    document.querySelector('#computer-scissors').style.backgroundColor = "";
 
 }
 
