@@ -70,14 +70,6 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-function getInput(){
-    
-    let choice = prompt("Please choose Rock, Paper or Scissors", "Type Here");
-    return choice;
-
-}
-
-
 /* Play 5 round of game, keep the score and report the winner or loser at the end */
 
 function play(playerChoice) {
