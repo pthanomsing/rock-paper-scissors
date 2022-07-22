@@ -144,8 +144,10 @@ function printScore() {
 
 }
 
-function hilightButton(playerChoice, computerChoice, roundScore) {
 
+/* Hilight the buttons base on the result of the round => 1 = win, 2 = lose, 3 = draw */
+
+function hilightButton(playerChoice, computerChoice, roundScore) {
 
     switch (roundScore) {
         case 1:
@@ -171,13 +173,11 @@ function hilightButton(playerChoice, computerChoice, roundScore) {
 function clearHilight() {
 
 
-    document.querySelector('#rock').style.backgroundColor = "";
-    document.querySelector('#paper').style.backgroundColor = "";
-    document.querySelector('#scissors').style.backgroundColor = "";
+    const buttons = document.querySelectorAll('button');
 
-    document.querySelector('#computer-rock').style.backgroundColor = "";
-    document.querySelector('#computer-paper').style.backgroundColor = "";
-    document.querySelector('#computer-scissors').style.backgroundColor = "";
+    buttons.forEach((button) => {
+        button.style.backgroundColor = "";
+    });
 
 }
 
