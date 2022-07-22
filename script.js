@@ -104,7 +104,10 @@ function play(playerChoice) {
 
         console.log(`ROUND ${round} : Your score = ${playerScore}  Computer score = ${computerScore}`)
         
-        checkWinner();
+        resultText.textContent = checkWinner();
+        if (checkWinner() != null){
+        resultContainer.appendChild(resultText);
+        }
 }
 
 
@@ -112,10 +115,10 @@ function play(playerChoice) {
 
 function checkWinner() {
     if (playerScore===5) {
-        console.log ('YOU ARE THE WINNER!')
+        return 'YOU ARE THE WINNER!'
     }
     else if (computerScore===5) {
-        console.log ('THE COMPUTER WON!')
+        return 'THE COMPUTER WON!';
     }
     else {
         return;
@@ -164,3 +167,9 @@ paperButton.addEventListener('click', function() {
 scissorsButton.addEventListener('click', function() { 
     play('scissors');
 });
+
+
+const resultContainer = document.querySelector('#container');
+const resultText = document.createElement('div');
+
+
