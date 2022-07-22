@@ -104,10 +104,10 @@ function play(playerChoice) {
 
         console.log(`ROUND ${round} : Your score = ${playerScore}  Computer score = ${computerScore}`)
         
-        resultText.textContent = checkWinner();
-        if (checkWinner() != null){
-        resultContainer.appendChild(resultText);
-        }
+        gameResult.textContent = checkWinner();
+       
+        resultContainer.appendChild(gameResult);
+        
 }
 
 
@@ -170,6 +170,6 @@ scissorsButton.addEventListener('click', function() {
 
 
 const resultContainer = document.querySelector('#container');
-const resultText = document.createElement('div');
+const gameResult = document.createElement('div');
 
 
