@@ -107,14 +107,14 @@ function play(playerChoice) {
     /* Print the winner of the game by comparing the score*/
 
     function printWinner(playerScore, computerScore) {
-        if (playerScore>computerScore) {
+        if (playerScore===5) {
             console.log ('YOU ARE THE WINNER!')
         }
-        else if (playerScore<computerScore) {
+        else if (computerScore===5) {
             console.log ('THE COMPUTER WON!')
         }
         else {
-            console.log('YOU DRAW! WHAT ARE THE CHANCE?')
+            return;
         }
     }
 
