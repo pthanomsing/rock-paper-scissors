@@ -181,14 +181,14 @@ function clearHilight() {
 
     
 
-
-// Score of Player vs Computer
 let playerScore = 0;
 let computerScore = 0;
 let round = 0;
 let roundScore = 0;
 
+const resultContainer = document.querySelector('#result');
 
+/* Select all player buttons and play the round when clicked */
 
 const playerButtons = document.querySelectorAll('#rock,#paper,#scissors');
 
@@ -199,9 +199,11 @@ playerButtons.forEach((playerButton) => {
 });
 
 
-const resultContainer = document.querySelector('#result');
+/* Create div to contain the round and game result */
+
 const roundResult = document.createElement('div');
 roundResult.setAttribute("id","round-result");
+
 const gameResult = document.createElement('div');
 gameResult.setAttribute("id","game-result");
 
