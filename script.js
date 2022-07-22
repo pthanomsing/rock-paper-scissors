@@ -83,13 +83,12 @@ function getInput(){
 
 /* Play 5 round of game, keep the score and report the winner or loser at the end */
 
-function play() {
-
-    let playerScore = 0;
-    let computerScore = 0;
+function play(playerChoice) {
 
    
-        let result = playRound(getInput(),computerPlay());
+
+   
+        let result = playRound(playerChoice,computerPlay());
         console.log(result);
 
         /* Do not count round if updateScore return 0 */
@@ -100,9 +99,9 @@ function play() {
 
         
 
-        console.log(`ROUND ${i+1} : Your score = ${playerScore}  Computer score = ${computerScore}`)
+        console.log(`ROUND ${round+1} : Your score = ${playerScore}  Computer score = ${computerScore}`)
         
-    }
+    
     printWinner(playerScore,computerScore);
 
     /* Print the winner of the game by comparing the score*/
@@ -141,3 +140,23 @@ function play() {
     
 }
 
+
+// Score of Player vs Computer
+let playerScore = 0;
+let computerScore = 0;
+let round = 0;
+
+
+const rockButton = document.querySelector('#rock');
+const paperButton = document.querySelector('#paper');
+const scissorsButton = document.querySelector('#scissors')
+
+rockButton.addEventListener('click', function() { 
+    play('rock');
+});
+paperButton.addEventListener('click', function() { 
+    play('paper');
+});
+scissorsButton.addEventListener('click', function() { 
+    play('scissors');
+});
