@@ -98,5 +98,6 @@ button {
 }
 
 #result {
-    height:200px;
+    height:150px;
+    text-align: center;
 }
