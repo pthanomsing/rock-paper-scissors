@@ -86,17 +86,12 @@ function play(playerChoice) {
 
         clearHilight(); 
         
-        roundResult.textContent = playRound(playerChoice,computerChoice);
+        roundResult.textContent = `[ROUND ${round}]  ${playRound(playerChoice,computerChoice)}`;
         resultContainer.appendChild(roundResult);
 
         /* Do not count round if updateScore return 0 */
 
         roundScore = updateScore(result);
-
-
-        
-        scoreResult.textContent = `[ROUND ${round}]  YOU ${playerScore}  -  ${computerScore} COMPUTER `;
-        resultContainer.appendChild(scoreResult);
         
         gameResult.textContent = checkWinner();
         resultContainer.appendChild(gameResult);
@@ -146,7 +141,7 @@ function printScore() {
 
     document.querySelector('#player-score').textContent = playerScore;
     document.querySelector('#computer-score').textContent = computerScore;
-    
+
 }
 
 function hilightButton(playerChoice, computerChoice, roundScore) {
@@ -219,8 +214,6 @@ scissorsButton.addEventListener('click', function() {
 const resultContainer = document.querySelector('#container');
 const roundResult = document.createElement('div');
 roundResult.setAttribute("id","round-result");
-const scoreResult = document.createElement('div');
-scoreResult.setAttribute("id","score-result");
 const gameResult = document.createElement('div');
 gameResult.setAttribute("id","game-result");
 
