@@ -1,7 +1,7 @@
 
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Moji', sans-serif;
 
     display:flex;
     align-items: center;
@@ -20,6 +20,7 @@ body {
 h1 {
     color: white;
     font-size: 50px;
+    margin-top: 0;
 }
 #container {
     display:flex;
@@ -77,6 +78,8 @@ button {
 
     height:100px;
     width:300px;
+
+    font-family: 'Cursed Timer ULiL';
 
     
 
