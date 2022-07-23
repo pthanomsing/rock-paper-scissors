@@ -1,5 +1,4 @@
 
-
 body {
     font-family: 'Moji', sans-serif;
 
@@ -55,7 +54,9 @@ button {
     
 }
 
-button:hover {
+#rock:hover,
+#paper:hover,
+#scissors:hover {
     background-color: #FF90B0;
 }
 
