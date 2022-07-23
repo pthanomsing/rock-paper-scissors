@@ -60,6 +60,12 @@ button {
     background-color: #FF90B0;
 }
 
+#computer-rock,
+#computer-paper,
+#computer-scissors {
+    background-color: black;
+}
+
 #game-result {
     font-size: 30px;
 }
